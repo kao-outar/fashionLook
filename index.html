@@ -1,11 +1,71 @@
-<!DOCTYPE html> 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FashionLook</title>
-    </head>
-    <body>
-        <h1>FashionLook</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👗 Fashion AI - Reconnaissance de Vêtements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👗 Fashion AI</h1>
+            <p>Reconnaissance de vêtements par intelligence artificielle</p>
+        </div>
+
+        <div class="mode-switch">
+            <button class="mode-btn active" id="uploadModeBtn">📤 Upload</button>
+            <button class="mode-btn" id="webcamModeBtn">📸 Webcam</button>
+        </div>
+
+        <!-- Section Upload -->
+        <div class="input-section active" id="uploadSection">
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">📁</div>
+                <div class="upload-text">Cliquez ou glissez une image ici</div>
+                <div class="upload-hint">Formats acceptés : JPG, PNG, GIF</div>
+            </div>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <!-- Section Webcam -->
+        <div class="input-section" id="webcamSection">
+            <div class="webcam-container">
+                <div class="webcam-preview">
+                    <video id="webcam" width="640" height="480" autoplay></video>
+                </div>
+                <button class="capture-btn" id="captureBtn">📸 Capturer</button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Analyse en cours...</p>
+        </div>
+
+        <!-- Preview et résultats -->
+        <div class="preview-section" id="previewSection">
+            <div class="preview-container">
+                <div class="preview-image">
+                    <h3 style="margin-bottom: 15px; color: #667eea;">Image analysée</h3>
+                    <canvas id="previewCanvas"></canvas>
+                </div>
+                <div class="results">
+                    <h3 style="margin-bottom: 15px; color: #667eea;">Prédictions</h3>
+                    <div id="resultsContainer"></div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button class="reset-btn" id="resetBtn">🔄 Nouvelle analyse</button>
+            </div>
+        </div>
+
+        <!-- Message d'erreur -->
+        <div class="error-message" id="errorMessage"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
