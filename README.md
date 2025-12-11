@@ -2,6 +2,9 @@
 
 Application web de reconnaissance de vêtements utilisant Fashion MNIST avec PyTorch et ONNX Runtime Web.
 
+<img width="1920" height="912" alt="image" src="https://github.com/user-attachments/assets/6b168cb4-4e10-472c-99f2-1c6931d5b796" />
+
+
 ## 🎯 Fonctionnalités
 
 - ✅ **Upload d'images** : Glissez-déposez ou sélectionnez une photo
@@ -69,8 +72,9 @@ Avec les techniques de régularisation appliquées :
 
 ## 📈 Suivi de l'entraînement avec TensorBoard
 
+<img width="1192" height="880" alt="image" src="https://github.com/user-attachments/assets/1580e25a-83fc-4022-a0ce-690f680c5ddb" />
 
-
+<img width="1248" height="958" alt="image" src="https://github.com/user-attachments/assets/40f760e3-5fc7-4044-b9ba-51c3882f3c7c" />
 
 
 ## 🎓 Concepts Clés
@@ -129,4 +133,5 @@ Le modèle est entraîné sur Fashion MNIST (images 28x28 en niveaux de gris). L
 - [Fashion MNIST Dataset](https://github.com/zalandoresearch/fashion-mnist)
 - [PyTorch Documentation](https://pytorch.org/docs/)
 - [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/)
+
 
